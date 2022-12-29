@@ -20,7 +20,7 @@
     docker login
     ```
 
-4. Pushing the **yezhyck/devops-hw5** Docker image to my public Docker Hub repository **yezhyck/devops-hw5**:
+4. Pushing the Docker image **yezhyck/devops-hw5** to my public Docker Hub repository **yezhyck/devops-hw5**:
 
     ```
     docker push yezhyck/devops-hw5
