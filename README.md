@@ -8,7 +8,7 @@
     docker build . -t yezhyck/devops-hw5
     ```
 
-2. Running a container **devops-hw5** with cpu(***500MB***) and memory(***1.5***) limits:
+2. Running a container **devops-hw5** with memory(***500MB***) and cpus(***1.5***) limits:
 
     ```
     docker run -d -p 80:80 --memory=500m --cpus=1.5 --name devops-hw5 yezhyck/devops-hw5
