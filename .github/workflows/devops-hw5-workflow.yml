@@ -93,4 +93,4 @@ jobs:
       run: docker run -d -p 80:80 ${{ secrets.DOCKER_HUB_USERNAME }}/devops-hw5:latest
     
     - name: Curl check
-      run: curl localhost:80
+      run: curl http://localhost:80/
