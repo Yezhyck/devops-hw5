@@ -25,6 +25,10 @@
     ```
     docker push yezhyck/devops-hw5
     ```
+5. Executing a curl request at **http://localhost:80/**
+    ```
+    curl http://localhost:80/
+    ```
 
 <br>
 
