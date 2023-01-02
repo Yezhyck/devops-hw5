@@ -87,10 +87,10 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     - name: Pull Docker image
-      run: docker pull ${{ secrets.DOCKERHUB_PROFILE }}/devops-hw5:latest
+      run: docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/devops-hw5:latest
       
     - name: Run Docker image
-      run: docker run -d -p 80:80 ${{ secrets.DOCKERHUB_PROFILE }}/devops-hw5:latest
+      run: docker run -d -p 80:80 ${{ secrets.DOCKER_HUB_USERNAME }}/devops-hw5:latest
     
     - name: Curl check
       run: curl localhost:80
