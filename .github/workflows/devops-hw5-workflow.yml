@@ -44,7 +44,7 @@ jobs:
         context: .
         file: ./Dockerfile
         tags: ${{ secrets.DOCKER_HUB_USERNAME }}/devops-hw5:latest
-        outputs: type = docker, dest = /tmp/devops-hw5.tar
+        outputs: type=docker,dest=/tmp/devops-hw5.tar
 
     - name: Upload artifact
       uses: actions/upload-artifact@v3
