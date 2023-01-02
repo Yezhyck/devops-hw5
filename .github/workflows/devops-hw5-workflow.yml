@@ -94,5 +94,5 @@ jobs:
     
     - name: Curl check
       run: |
-        sleep 15;
+        sleep 5;
         curl localhost:80
