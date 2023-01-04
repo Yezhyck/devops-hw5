@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-devops-hw5
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: devops-hw5
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: devops-hw5
+    spec:
+      containers:
+        - name: devops-hw5
+          image: yezhyck/devops-hw5:latest
+          resources:
+            limits:
+              memory: 500Mi
+              cpu: "1.5"
+            requests:
+              memory: 250Mi
+              cpu: "0.5"
+          ports:
+          - name: devops-hw5
+            containerPort: 80
+          imagePullPolicy: Always
+          livenessProbe:
+            httpGet:
+              path: /
+              port: devops-hw5
+            initialDelaySeconds: 5
+            periodSeconds: 5
